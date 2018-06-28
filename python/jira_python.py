@@ -4,13 +4,13 @@
 #print('Hello, world!')
 
 from subprocess import run
-from jira import JIRA
+#from jira import JIRA
 import argparse
 
 CONNECT_STRING = 'https://jira/surveysampling.com'
 
 run('whoami').returncode
 
-parser =  
+#parser =  
 
 #jira = JIRA('CONNECT_STRING')
