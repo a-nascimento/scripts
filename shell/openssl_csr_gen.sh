@@ -14,9 +14,9 @@ then
 fi
 
 # Generate Key - need to generate key before CSR 
-#openssl genrsa -out ${KEY_FILE} ${BIT_SIZE}
+openssl genrsa -out ${KEY_FILE} ${BIT_SIZE}
 # Generate CSR
-#openssl req -new -key ${KEY_FILE} -out ${CSR_FILE}
+openssl req -new -key ${KEY_FILE} -out ${CSR_FILE}
 # Read CSR
 #openssl req -in ${CSR_FILE} -noout -text
 # Convert p7b to pem
@@ -24,8 +24,8 @@ fi
 # Read pem file
 #openssl x509 -in ${DOMAIN} -text -noout
 # Hash of cert file
-openssl x509 -noout -modulus -in ${DOMAIN}.pem | openssl md5
+#openssl x509 -noout -modulus -in ${DOMAIN}.pem | openssl md5
 # Hash of key file
-openssl rsa -noout -modulus -in ${DOMAIN}.key | openssl md5
+#openssl rsa -noout -modulus -in ${DOMAIN}.key | openssl md5
 
 exit 0
