@@ -28,4 +28,10 @@ openssl req -new -key ${KEY_FILE} -out ${CSR_FILE}
 # Hash of key file
 #openssl rsa -noout -modulus -in ${DOMAIN}.key | openssl md5
 
+# convert pfx to crt
+# openssl pkcs12 -in ${DOMAIN}.pfx -nocerts -out ${DOMAIN}.key.enc # export encrypted key
+# openssl rsa -in ${DOMAIN}.key.enc -out ${DOMAIN}.key # decrypt encrypted key
+# openssl pkcs12 -in ${DOMAIN}.pfx -clcerts -nokeys -out ${DOMAIN}.crt # export crt
+
+
 exit 0
